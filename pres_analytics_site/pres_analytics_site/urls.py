@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
 from analytics_main.views import index
 from analytics_main import urls as analytics_main_urls
-
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -16,6 +15,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^$',index,name='home'),
-    url(r'',include(analytics_main_urls)
+    url(r'/',index,name='home'),
+    url(r'',include(analytics_main_urls))
 )

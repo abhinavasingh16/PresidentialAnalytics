@@ -8,11 +8,11 @@ class Person(models.Model):
 	num_followers = models.IntegerField()
 
 class Word_Count_Table(models.Model):
-	person = models.ForeignKey(Person)
+	person = models.OneToOneField(Person)
 	word = models.CharField(max_length=100)
 	count = models.IntegerField()
 
 class Tweet_Table(models.Model):
-	person = models.ForiegnKey(Person)
+	person = models.OneToOneField(Person)
 	tweet_time = models.DateTimeField()
 	tweet_place = models.CharField(max_length=500)

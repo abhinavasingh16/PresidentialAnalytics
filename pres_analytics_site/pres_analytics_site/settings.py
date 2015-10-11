@@ -1,7 +1,4 @@
-# Django settings for pres_analytics_site project.
-from os.path import dirname, join
-
-PROJECT_DIR = dirname(__file__)
+# Django settings for hello project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -15,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': join(PROJECT_DIR, 'sqlite3.db'),                     # Or path to database file if using sqlite3.
+        'NAME': '',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -86,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 's@6blzxtya*6n4o*!vu$)769s!i(q-qqttdf&a3$g)#-0+7!3m'
+SECRET_KEY = '#83ub4-mw$zs-u*h^94+s-_k8pgnf80pizuo@m+0ju$i^g=q-g'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -127,6 +124,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'analytics_main'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
